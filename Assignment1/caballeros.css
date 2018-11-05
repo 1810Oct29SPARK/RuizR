@@ -1,0 +1,269 @@
+/* Header Style of Project */
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+    height: 70px;
+    background-color:rgba(56, 84, 138);
+    display: flex;
+    border-bottom: 2px solid white;
+}
+
+.navbar ul {
+    padding: 0;
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+
+.navbar li {
+    display: inline;
+    text-align: center;
+    flex: 1;
+    font-weight: bold;
+    margin: 0;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    width: 200px;
+    padding: 2.6%;
+}
+
+li a:hover {
+    background-color: rgb(231, 109, 38);
+    color:black;
+    width: 300px;
+ 
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(231, 109, 38);
+    color:black;
+}
+
+.activeHome {
+    background-color: rgb(253, 221, 50);
+    color: black;
+}
+
+.activeUsa {
+    background-color: rgb(192, 229, 250);
+    color: black;
+}
+
+.activeBrasil {
+    background-color: rgb(150, 193, 70);
+    color: black;
+}
+
+.activeMexico {
+    background-color: rgb(232, 33, 46);
+    color: black;
+}
+
+
+/* Body Style of Project */
+body {
+    background-color: rgba(56, 84, 138);
+    color: white;
+    font-family: Garamond;
+    font-size: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#ttc {
+    margin-left: 10px;
+    padding: none;
+    margin-top: none;
+    margin-bottom: none;
+
+}
+
+
+/* Home Body */
+.backgroundText {
+    width: 550px;
+    height: 30%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 30px;
+    text-align: justify;
+    float: left;
+    margin-left: 40px;
+    font-size: 23px;
+}
+
+#Poster {
+    margin-right: 0px;
+    float: right top;
+    text-align: center;
+    padding-top: none;
+}
+
+
+/* USA Body */
+.usaText {
+    width: 550px;
+    padding: 30px;
+    font-size: 23px;
+    text-align: justify;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    float: right top;
+
+}
+
+.usaText2 {
+    width: 550px;
+    font-size: 23px;
+    text-align: justify;
+}
+
+#Aracuan {
+    text-align: left;
+    padding-right: 110px;
+    float: left top;
+    margin-right: 0px;
+    float: right top;
+    text-align: center;
+    padding-top: none;
+}
+
+.AracuanPic {
+    display: block;
+    margin-right: 85px;
+    margin-top: none;
+    margin-left: none;
+    height: 300px;
+    padding: 15px;
+    float: right;
+    
+}
+
+.SegsImg {
+    height: 275px;
+    padding: 15px;
+    margin-right: 10px;
+    float: right;
+    text-align: center;
+    padding-top: none;
+    display: block;
+} 
+
+#Article {
+    margin: none;
+    height: 300px;
+    width: 350px;
+    padding-bottom: 0;
+}
+
+.Segments {
+    font-size: 23px;
+    box-align: center;
+    text-align: left;
+    font-family: Garamond;
+    padding: 20px;
+    height: 275px;
+    width: 570px;
+    margin: none;
+    margin-right: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+/* Brasil Body */
+#brasilText {
+    font-size: 23px;
+    font-family: Garamond;
+    margin: 0px auto;
+    padding: 5px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.imgBra {
+    display: inline-block;
+    margin-top: none;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    padding: 10px;
+}
+
+
+#imagesBrasil {
+    text-align:center;
+}
+
+
+/* Mexico Body */
+.mexicoText {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 30px;
+    font-size: 23px;
+}
+
+#imagesMexico {
+    text-align:center;
+}
+
+.imgMex {
+    display: inline-block;
+    margin-top: none;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    padding: 10px;
+}
+
+.danceMexico {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 20px;
+    text-align: center;
+}
+
+#mexAdventures {
+    font-size: 23px;
+}
+
+#cities {
+    font-size: 23px;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 23px;
+    margin: 0px auto;
+}
+
+table, th, td {
+    border: 1.5px solid white;
+    padding: 13px;
+    text-align: center;
+}
+
+/* Footer of Project */
+#filmFooter {
+    padding: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba(56, 84, 138);
+    border-top: 2px solid white;
+}

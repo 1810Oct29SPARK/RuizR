@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Three Caballeros - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="caballeros.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <header> <!-- Represents a container for introductory content or a set of navigational links -->
+        <img src="banner1.jpg" width="450px" />
+        <nav class="navbar"> <!-- Defines a set of navigation links. Intended only for major navigation links. -->
+            <ul> <!-- Unordered list, dots. <ol> is Ordered lists, numbers <dl> is Definition lists, alphabetical. -->
+                <li class="activeHome"><strong><a href="home.html" style="text-decoration:none">HOME</a></strong></li> <!-- strong makes the text bold -->
+                <li><strong><a href="usa.html" style="text-decoration:none">USA</a></strong></li> <!-- a is an anchor tab -->
+                <li><strong><a href="brasil.html" style="text-decoration:none">BRAZIL</a></strong></li>
+                <li><strong><a href="mexico.html" style="text-decoration:none">MEXICO</a></strong></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div id="filmBackground"> <!-- div defines a division or a section in an HTML document, often used as a container for other HTML elements to style them. -->
+        <h1 id="ttc"> <!-- The Three Caballeros --> <!-- Size and importance of header -->
+            The Three Caballeros
+        </h1>
+
+        <p class="backgroundText"> <!-- class specifies one or more classnames for an element. -->
+            The Three Caballeros is a 1944 American live-action animated musical package film produced by <span style="color:rgb(253, 221, 50); font-weight: bold">Walt Disney</span> and released by RKO Radio Pictures. 
+            The film premiered in Mexico City on December 21, 1944. It was released in the United States on February 3, 1945 and in the UK that March. 
+            The seventh Disney animated feature film, the film plots an adventure through parts of Latin America, combining live-action and animation. 
+            This is the second of the six package films released by Walt Disney Productions in the 1940s, following Saludos Amigos (1942). 
+            It was also the first feature length film to incorporate traditional animation with real life, live-action actors.
+        </p>
+        <p class="backgroundText">
+            The film is plotted as a series of self-contained segments, strung together by the device of <span style="color: rgb(192, 229, 250); font-weight: bold">Donald Duck</span> opening birthday gifts from his Latin American friends. 
+            Several Latin American stars of the period appear, including singers Aurora Miranda (sister of Carmen Miranda) and Dora Luz, as well as singer and dancer Carmen Molina.
+        </p>
+
+        <p class="backgroundText">
+            The film was produced as part of the studio's good will message for South America.
+            The film stars <span style="color: rgb(192, 229, 250); font-weight: bold">Donald Duck</span>, who in the course of the film is joined by old friend 
+            <span style="color: rgb(150, 193, 70); font-weight: bold">José Carioca</span>, the cigar-smoking parrot from Saludos Amigos, who represents Brazil, 
+            and later becomes friends with a pistol-packing rooster named <span style="color: rgb(232, 33, 46); font-weight: bold">Panchito Pistoles</span>, who represents Mexico.
+            <!-- span is used to group inline-elements in a document. -->
+        </p>
+    </div>
+
+    <br> <!-- Inserts a single line break. It is an empty tag, meaning that it has no end tags. -->
+
+    <div id="Poster"> <!-- id specifies a unique id for an HTML element (the value must be unique within the HTML) -->
+        <aside> <!-- aside defines some content aside from the content it is placed in. Should be related to the surrounding content. -->
+        <img src="Picture1.jpg" title="Poster" width="430" height="900" alt="Poster of Film" />
+        <p style="font-size: 17px";>
+            Poster of the original feature film.
+        </p>
+        </aside>
+    </div>
+
+    <footer id="filmFooter"> <!-- Defines the footer for a document. -->
+        Website made by Rebecca A. Ruiz
+        <form action="https://moviesanywhere.com/movie/the-three-caballeros" method="POST" >
+            <input type="submit" value="Buy the movie!" style="font-size: 50px; margin-left: 35px;"/>
+            <!-- form is used to create an HTML orm or user input. -->
+            <!-- input specifies and input field where the user can enter data. -->
+        </form>
+    </footer>
+
+</body>
+</html>
