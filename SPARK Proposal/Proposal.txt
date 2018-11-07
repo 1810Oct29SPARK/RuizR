@@ -1,9 +1,10 @@
-Theme: Queen
+Theme: Queen Fan Club
+
 Use Cases:
 1. Movie
 2. History of the band
-3. Members
-4. AIDS Foundation
+3. Fan Club Members login
+4. AIDS Foundation and (maybe) donation link
 5. Most Popular Songs
-6. Collaborations
-7. History
+6. Collaborations (?)
+7. Band Tour
