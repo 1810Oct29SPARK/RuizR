@@ -106,46 +106,66 @@
 
 
 
+// The Movie DataBase fetch of the Bohemian Rhapsody Movie Poster
 
-
-
-
- let state = {
-  movie: ''
-};
-
-const apiUrl = 'https://www.themoviedb.org/authenticate/019f4ff823c8d1b6e89faab78c31213b';
-
-//using promises
-let movies = function() {
-  fetch(apiUrl, {method: "GET", headers:{"Accept":"application/json"}})
-  //define behavior for when the response returns
-  .then((response) => {
-      //return unwrapped promise object for the next chaining operation
-      return response.json();
-  })
-      //utilize unwrapped promise a javascript object
-  .then((data) => {
-      console.log(data);
-      state.movie = data.movie;
-      updateContent();
-  })
-      //what if there's a problem?
-  .catch( (error) => {
-      alert('oh no :(');
-      console.log(error);
-  });
-}
-
-let updateContent = function() {
-  console.log(state);
-  //select movie 
-  const movieElement = document.getElementById('movie-field');
-  movieElement.innerText = state.movie;
-}
-
-document.getElementById('new-movie-button').addEventListener('click', movies);
-
+ let baseURL = 'https://api.themoviedb.org/3/';
+        let configData = null;
+        let baseImageURL = null;
+        
+        let getConfig = function () {
+            let url = "".concat(baseURL, 'configuration?api_key=', APIKEY); 
+            fetch(url)
+            .then((result)=>{
+                return result.json();
+            })
+            .then((data)=>{
+                baseImageURL = data.images.secure_base_url;
+                configData = data.images;
+                console.log('config:', data);
+                console.log('config fetched');
+                runSearch('Bohemian Rhapsody')
+            })
+            .catch(function(err){
+                alert(err);
+            });
+        }
+        
+        let runSearch = function (keyword) {
+            let url = ''.concat(baseURL, 'search/movie?api_key=', APIKEY, '&query=', keyword);
+    //FETCH REQUEST
+            fetch(url)
+            .then(result=>result.json())
+            .then((data)=>{
+                //process the returned data
+                document.getElementById('output').innerHTML = JSON.stringify(data, null, 4);
+                //work with results array...
+                
+            })
+        }
+        
+        document.addEventListener('DOMContentLoaded', getConfig);
+        /*******************************
+        SAMPLE SEARCH RESULTS DATA
+        {
+      "vote_count": 981,
+      "id": 424694,
+      "video": false,
+      "vote_average": 8.3,
+      "title": "Bohemian Rhapsody",
+      "popularity": 157.171,
+      "poster_path": "/lHu1wtNaczFPGFDTrjCSzeLPTKN.jpg",
+      "original_language": "en",
+      "original_title": "Bohemian Rhapsody",
+      "genre_ids": [
+        18,
+        10402
+      ],
+      "backdrop_path": "/pbXgLEYh8rlG2Km5IGZPnhcnuSz.jpg",
+      "adult": false,
+      "overview": "Singer Freddie Mercury, guitarist Brian May, drummer Roger Taylor and bass guitarist John Deacon take the music world by storm when they form the rock 'n' roll band Queen in 1970. Hit songs become instant classics. When Mercury's increasingly wild lifestyle starts to spiral out of control, Queen soon faces its greatest challenge yet – finding a way to keep the band together amid the success and excess.",
+      "release_date": "2018-10-24"
+          },
+          ********************************/
 
 
 
