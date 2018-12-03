@@ -1,0 +1,29 @@
+package com.revature.example;
+
+public class StringCodeChallenge {
+
+	private static final String String = null;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/**
+		 * 1. Without using the StringBuilder or StringBuffer class, write a method that
+		 * reverses a String. Example: reverse("example"); -> "elpmaxe"
+		 *
+		 * @param string
+		 * @return
+		 */
+		String reverse(String) {
+			static void stringChallenge() {
+				String challenge1 = "Hello World";
+				String[] words = challenge1.reverse("Hello World"); //reverse
+				for (String w : words) {
+					System.out.println(w);
+				}
+			}
+			
+		}
+	}
+
+}

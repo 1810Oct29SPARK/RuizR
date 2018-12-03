@@ -1,0 +1,29 @@
+package com.revature.calculator;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class CalculatorTest {
+	
+	private Calculator c;
+
+	@Before
+	public static void setCalculator() {
+		this.c = new Calculator();
+	}
+	
+	/*
+	 * TDD: red-green refactoring start with requirement, write test, build code to
+	 * match
+	 * 
+	 * Calculator requirements: (Calculator class) 
+	 * 1. Has an add() method which takes a String parameter and returns a String
+	 */
+	
+	@Test
+	public void executeAddMethod() {
+		assertTrue(c.add("") instanceof String);
+	}
+}

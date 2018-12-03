@@ -1,0 +1,30 @@
+package com.revature.calculator;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class CalculatorTest {
+	
+	private Calculator c;
+
+	@Before
+	public void setCalculator() {
+		this.c = new Calculator();
+	}
+	
+	/*
+	 * TDD: red-green refactoring start with requirement, write test, build code to
+	 * match
+	 * 
+	 * Calculator requirements: (Calculator class) 
+	 * 1. Calling add("") returns 
+	 */
+	
+	@Test
+	public void emptyStringReturnsZero() {
+		assertEquals(0, c.add(""), .001); // floating-point assertions requires an offset
+		
+	}
+}

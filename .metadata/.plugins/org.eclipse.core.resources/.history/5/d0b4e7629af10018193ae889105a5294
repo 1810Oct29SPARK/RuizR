@@ -1,0 +1,5 @@
+package com.revature.transport;
+
+public class Boat extends com.revature.transport.Vehicle.Boat {
+
+}

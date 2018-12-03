@@ -1,0 +1,31 @@
+package com.revature.example;
+
+public class StringsAndArrays {
+
+	public static void main(String[] args) {
+		funWithStrings();
+
+	}
+
+	static void funWithStrings() {
+		//string literal
+		String a = "hello";
+		String b = new String ("hello");
+		
+		/*
+		 * .equals () is inherited from Object
+		 * most reference types override to define "equality"
+		 * (usually by the fields)
+		 * String has it overridden to check the String literal
+		 */
+		System.out.println("string is equal to string b: " + a.equals(b));
+		
+		/*
+		 * == is good for comparing primitives
+		 * or checking whether two objects are the same object
+		 * (compare the REFERENCE)
+		 */
+		System.out.println("string a is the same object as string b: " + (a==b));
+		
+	}
+}

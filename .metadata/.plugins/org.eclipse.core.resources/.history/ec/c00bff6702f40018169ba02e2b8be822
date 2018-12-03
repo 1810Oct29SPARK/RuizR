@@ -1,0 +1,29 @@
+package com.revature.example;
+
+public class IteratorDemo {
+
+	public static void main(String[] args) {
+
+		ArrayList<Integer> exampleList = new ArrayList<Integer>();
+		exampleList.add(6);
+		exampleList.add(15);
+		exampleList.add(49);
+		exampleList.add(61);
+		exampleList.add(72);
+		exampleList.add(90);
+		System.out.println(exampleList);
+		
+		
+		/*
+		 * side note: && vs &, || vs |
+		 * doubles are short-circuit operators - second operand is not checked
+		 * if...
+		 * for &&, if first operand is false
+		 * for ||, if first operand is true
+		 * singles are 'bitwise' operators
+		 * preference is short-circuit (&&, ||)
+		 */
+
+	}
+
+}

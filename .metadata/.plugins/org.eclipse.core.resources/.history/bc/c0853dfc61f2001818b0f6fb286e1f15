@@ -1,0 +1,5 @@
+package com.revature.birds;
+
+public interface Birds {
+
+}

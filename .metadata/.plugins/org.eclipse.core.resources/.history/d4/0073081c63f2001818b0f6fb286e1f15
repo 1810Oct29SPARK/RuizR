@@ -1,0 +1,20 @@
+package com.revature.birds;
+
+public class Parrot extends Domestic {
+
+	public Parrot() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	void Fly() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

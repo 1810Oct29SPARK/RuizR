@@ -1,0 +1,27 @@
+package com.revature.example;
+
+import javax.swing.plaf.synth.SynthSplitPaneUI;
+
+public class Scopes {
+	
+	/*
+	 * static variable
+	 * in the class or "static" scope
+	 * variable is defined for the entire class
+	 */
+	public static String variable1 = "v1";
+	
+	/*
+	 * this is a variable that all instances will have
+	 * in the instance scope
+	 * not defined outside of an object of type Scope
+	 */
+	private String variable2 = "v2";
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println(variable1); //variable1 is defined
+	}
+
+}

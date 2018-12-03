@@ -1,0 +1,133 @@
+package com.revature.mutations;
+
+/* Problem
+ * Minimum Mutations!
+
+A gene string can be represented by an 8-character long string, with 
+choices from "A", "C", "G", "T".
+
+Suppose we need to investigate about a mutation (mutation from "start" 
+to "end"), where ONE mutation is defined as ONE single character changed 
+in the gene string.
+
+For example, "AACCGGTT" -> "AACCGGTA" is 1 mutation.
+
+Also, there is a given gene "bank", which records all the valid gene 
+mutations. A gene must be in the bank to make it a valid gene string.
+
+Now, given 3 things - start, end, bank, your task is to determine what 
+is the minimum number of mutations needed to mutate from "start" to 
+"end".
+If there is no such a mutation, return -1.
+If the start and end string are the same, return 0.
+
+Example:
+
+start: "AACCGGTT"
+end:   "AAACGGTA"
+bank: ["AACCGGTA", "AACCGCTA", "AAACGGTA"]
+
+return: 2
+
+Note:
+	Starting point is assumed to be valid, so it might not be 
+included in the bank.
+	If multiple mutations are needed, all mutations during in the 
+sequence must be valid.
+
+Organize your solution into a driver class (with a main method) and 
+utility class containing the logical implementation.
+Points will be docked for code that's too tightly coupled.
+The starting and ending sequences and mutation bank may be (in 
+descending order of points awarded) read from a file, input through the 
+console, or hardcoded in the driver class. 
+
+
+REFERENCE:
+
+Reading/writing to/from files in Java, you will need to use a 
+FileInputStream passed to an ObjectInputStream. 
+
+Submit your solution in this folder on your branch as .java files (if 
+you wrote your solution in Eclipse/STS, make sure no compiled .class 
+files or project metadata make their way up to GitHub. 
+ */
+
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class MinimumMutations {
+
+	public static int main(String start, String end, String[] bank) {
+
+		HashSet set = new HashSet();
+		// convert bank into set for faster lookup
+		for (String b : bank) {
+			set.add(b);
+		}
+
+		// check if end is not in bank, it means there is no solution
+		if (!set.contains(end)) {
+			return -1;
+		}
+
+		// queue to check on each mutated word
+		Queue<Container> queue = new LinkedList<Container>();
+
+		// set allowed characters to mutate words.
+		char[] mutationChar = { 'A', 'C', 'G', 'T' };
+
+		// here setting 0 steps away value in container
+		queue.add(new Container(0, start));
+
+		while (!queue.isEmpty()) {
+
+			Container con = queue.remove();
+			set.remove(con.words);
+
+			String words = con.words;
+
+			for (int i = 0; i < words.length(); i++) {
+				for (int j = 0; j < mutationChar.length; j++) {
+
+					StringBuilder str = new StringBuilder(words);
+
+					if (str.charAt(i) == mutationChar[j]) {
+						continue;
+					}
+
+					str.setCharAt(i, mutationChar[j]);
+
+					if (!set.contains(str.toString())) {
+						continue;
+					}
+
+					if (str.toString().equals(end)) {
+						return con.steps + 1;
+					} else {
+						queue.add(new Container(con.steps + 1, str.toString()));
+					}
+				}
+
+			}
+
+		}
+		return -1;
+	}
+}
+
+class Container{
+			    String words;
+			    int steps;
+			    
+			    public Container(int steps,String words){
+			        this.words = words;
+			        this.steps = steps;
+			    }
+			}
+// TODO Auto-generated method stub
+
+}
+
+}

@@ -1,0 +1,13 @@
+package com.revature.transport;
+
+import com.revature.Vehicle;
+
+public class Tornado extends Vehicle {
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

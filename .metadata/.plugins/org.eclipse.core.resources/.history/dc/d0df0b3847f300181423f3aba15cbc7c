@@ -1,0 +1,26 @@
+package com.revature.example;
+
+import java.util.Arrays;
+
+import com.revature.transport.Car;
+
+public class GenericsAndReflection {
+
+	public static void main(String[] args) {
+		
+		Car c = new Car (2300, "fury roadster", "mad max", 1000);
+		Car[] emptyCars = (Car[]) replicate(c,3);
+		System.out.println(Arrays.toString(emptyCars));
+
+	}
+
+	
+	// fills an array of specified size with objects of the same type as passed into method
+	static Object[] replicate (Object O, int size) {
+		Object[] replicants = new Object[size];
+		for (int i=0; i<size; i++) {
+			replicants[i] = new Object();
+		}
+		return replicants;
+	}
+}

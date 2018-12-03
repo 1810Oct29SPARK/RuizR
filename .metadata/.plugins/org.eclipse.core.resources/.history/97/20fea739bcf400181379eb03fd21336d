@@ -1,0 +1,14 @@
+package com.revature.comparison;
+
+import java.util.Comparator;
+import com.revature.transport.Car;
+
+public class CarMakeCompare implements Comparator<Car> {
+
+	public CarMakeCompare() {
+		@Override
+		public int compare(Car arg0, Car arg1) {
+			return ;
+	}
+
+}
