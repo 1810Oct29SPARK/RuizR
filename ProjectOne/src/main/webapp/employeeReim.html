@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Employee HTML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="ers2.css" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: rgb(25, 20, 26)">
+        <a class="navbar-brand"><span style="font-family: 'Cormorant Garamond', serif; font-weight: bold;">QUEEN</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="employee.html">Employee Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="employeeProfile.html">Profile</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="employeeReim.html">Reimbursement Page <span class="sr-only">(current)</span> </a>
+                </li>
+                <li class="nav-item">
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+<form action="Submit" method="post">
+  <div class="page-header">
+    <h1>Submit New Requests</h1>
+  </div>
+   <div class="form-group">
+    <label for="exampleTextarea">Amount</label><br/>
+    $<input type="number" value="0.00" min="0" step=".01" data-number-to-fixed="2" data-number-stepfactor="100" class="currency" id="amount" name="amount" />
+  </div>
+<div class="form-group">
+<div class="form-group">
+  <label for="exampleTextarea">Description</label>
+  <textarea class="form-control" id="reimbdesc" name="reimbdesc" rows="3">Dummy Text</textarea>
+</div>
+<div class="form-group">
+  <label for="exampleInputFile">Upload File (BETA)</label>
+  <input type="file" class="form-control-file" id="fileIn" name="fileIn" aria-describedby="file">
+  <small id="fileHelp" class="form-text text-muted">Upload file here.</small>
+</div>
+  <input type="number" name="HiddenID" id="HiddenID" style="display:none;"/>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<br>
+
+<div class="page-header">
+    <h1>Existing Requests</h1>
+  </div>
+<table class="table">
+<thead>
+  <tr>
+    <th>#</th>
+    <th>Status</th>
+    <th>Date Submitted</th>
+    <th>Date Viewed</th>
+    <th>Amount</th>
+  </tr>
+</thead>
+<tbody id="toReplace">
+  <tr>
+    <th scope="row">1</th>
+    <td>Dummy</td>
+    <td>Dummy</td>
+    <td>Dummy</td>
+    <td>Dummy</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+</body>
+</html>

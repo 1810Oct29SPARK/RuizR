@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond);
+
+/*
+.navbar-default {
+    background-color: rgb(25, 20, 26);
+    color: rgb(230, 230, 230);
+}
+*/
+
+
+body {
+    background-color: rgb(25, 20, 26);
+    color: rgb(230, 230, 230);
+    font-size: 17px;
+    font-family: 'Cormorant Garamond', serif;
+}
